@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+include layout/head.pug
+<body style="font-family: sans-serif; color:#222;">
+   include layout/navbar.pug
+
+<div class="container" style="align-item:center;">
+    <h2>All Blogs</h2>
+
+
+        each blog in blogs
+             h1.title= blog.title
+             p.snippet=  blog.description
+             p= blog.content
+             p= blog.author
+
+        //- if blog.title
+        //-      #{blog.title}
+        //- if blog.snippet
+        //-     #{blog.snippet}
+
+        //- else
+        //-     h3  story
+
+
+</div>
+include layout/footer
+</body>
+</html>
